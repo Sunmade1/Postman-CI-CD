@@ -627,62 +627,6 @@
 				}
 			},
 			"response": []
-		},
-		{
-			"name": "Test iterations",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"const jsonData = pm.response.json();\r",
-							"let find = jsonData.filters\r",
-							"console.log(find.map(item => item.id))\r",
-							"\r",
-							"for(let i=0; i<find.length; i++){\r",
-							"if(find[i].name === 'MANUFACTURER' ){\r",
-							"    console.log(find[i])\r",
-							"}\r",
-							"}\r",
-							"\r",
-							"find.forEach((item)=>{\r",
-							"if(item.name === 'MANUFACTURER' ){\r",
-							"    console.log(item)\r",
-							"}\r",
-							"})\r",
-							"const myfind = find.find((net)=> net.name === 'COUNTRY')\r",
-							"    console.log(myfind.id)\r",
-							"\r",
-							"/* function timesNumber(number){\r",
-							"   return number * 4\r",
-							" }\r",
-							"console.log(timesNumber(2)); */\r",
-							"\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://5a4a2051f323409288cf3ea108cbfd48.api.mockbin.io/",
-					"protocol": "https",
-					"host": [
-						"5a4a2051f323409288cf3ea108cbfd48",
-						"api",
-						"mockbin",
-						"io"
-					],
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
